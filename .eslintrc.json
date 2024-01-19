@@ -1,3 +1,37 @@
 {
-  "extends": "next/core-web-vitals"
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "next/core-web-vitals",
+    "prettier",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parserOptions": {
+    "project": ["./tsconfig.json"]
+  },
+  "rules": {
+    "no-console": "warn",
+    "dot-notation": "error",
+    "no-else-return": "error",
+    "no-floating-decimal": "error",
+    "no-unneeded-ternary": "error",
+    "no-lonely-if": "error",
+    "one-var-declaration-per-line": "error",
+    "@next/next/no-html-link-for-pages": "off",
+    "@typescript-eslint/interface-name-prefix": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unused-vars": "error",
+    "eslint-disable react/no-unescaped-entities": "off",
+    "@typescript-eslint/naming-convention": "off"
+  },
+  "ignorePatterns": [
+    "next.config.js",
+    "next-sitemap.config.js",
+    "postcss.config.js",
+    "vitest.config.js",
+    "tailwind.config.js",
+    "redirects.js"
+  ]
 }
